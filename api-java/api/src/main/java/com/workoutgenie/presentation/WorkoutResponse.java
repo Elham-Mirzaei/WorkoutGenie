@@ -1,4 +1,4 @@
-package com.workoutgenie.api;
+package com.workoutgenie.presentation;
 
 public class WorkoutResponse {
 	private String planType;

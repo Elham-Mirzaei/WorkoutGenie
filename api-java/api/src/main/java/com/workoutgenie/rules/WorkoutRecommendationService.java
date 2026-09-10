@@ -1,4 +1,6 @@
-package com.workoutgenie.api;
+package com.workoutgenie.rules;
+
+import com.workoutgenie.validation.WorkoutRequest;
 
 public class WorkoutRecommendationService {
 

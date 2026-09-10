@@ -1,4 +1,4 @@
-package com.workoutgenie.api;
+package com.workoutgenie.validation;
 
 public class WorkoutRequest {
 	int age;
