@@ -3,13 +3,11 @@ package com.workoutgenie.api;
 import com.workoutgenie.presentation.WorkoutResponse;
 import com.workoutgenie.rules.WorkoutRecommendationService;
 import com.workoutgenie.validation.WorkoutRequest;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/recommend")
+@CrossOrigin(origins = "http://localhost:63342")
 public class WorkoutController {
 	private WorkoutRecommendationService service = new WorkoutRecommendationService();
 
