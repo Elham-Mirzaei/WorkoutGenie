@@ -12,7 +12,7 @@ document.getElementById('workout-form').addEventListener('submit', async functio
     };
 
     try {
-        const response = await fetch('http://localhost:8080/recommend', {
+        const response = await fetch('https://workoutgenie-backend-elhammirzaei-h0fvctbqa5hpcxde.swedencentral-01.azurewebsites.net/recommend', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
