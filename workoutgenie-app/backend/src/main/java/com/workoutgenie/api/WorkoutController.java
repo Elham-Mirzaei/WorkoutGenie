@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/recommend")
-@CrossOrigin(origins = "https://workoutgenie-backend-elhammirzaei-h0fvctbqa5hpcxde.swedencentral-01.azurewebsites.net/recommend")
+@CrossOrigin(origins = "https://nice-forest-04041ed10.2.azurestaticapps.net")
 public class WorkoutController {
 	private WorkoutRecommendationService service = new WorkoutRecommendationService();
 
