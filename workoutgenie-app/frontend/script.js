@@ -22,6 +22,12 @@ document.getElementById('workout-form').addEventListener('submit', async functio
 
         const data = await response.json();
 
+        if (!response.ok) {
+            document.getElementById('result').innerText =
+                data.message || 'Please check your input and try again.';
+            return;
+        }
+
         const planDescriptions = {
             FULL_BODY_3X: "Full Body Workout, 3 Days per Week",
             UPPER_LOWER_4X: "Upper/Lower Split, 4 Days per Week",

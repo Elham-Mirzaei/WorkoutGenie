@@ -1,5 +1,8 @@
 package com.workoutgenie.validation;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+
 public class WorkoutRequest {
 	int age;
 	String gender;
@@ -7,6 +10,9 @@ public class WorkoutRequest {
 	double height;
 	String goal;
 	String experience;
+
+	@Min(value = 2, message = "Available training days must be at least 2.")
+	@Max(value = 6, message = "Available training days cannot be more than 6.")
 	int availableDays;
 
 	// Default constructor (required by Spring)
