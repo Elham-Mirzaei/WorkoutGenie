@@ -12,7 +12,7 @@ document.getElementById('workout-form').addEventListener('submit', async functio
     };
 
     try {
-        const response = await fetch('https://workoutgenie-backend-elhammirzaei-h0fvctbqa5hpcxde.swedencentral-01.azurewebsites.net/recommend', {
+        const response = await fetch('http://localhost:8080/recommend ', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -32,7 +32,10 @@ document.getElementById('workout-form').addEventListener('submit', async functio
             FULL_BODY_3X: "Full Body Workout, 3 Days per Week",
             UPPER_LOWER_4X: "Upper/Lower Split, 4 Days per Week",
             PUSH_PULL_LEGS: "Push/Pull/Legs Split, 5+ Days per Week",
-            HIIT_FAT_LOSS: "HIIT Fat Loss Program"
+            HIIT_FAT_LOSS: "HIIT Fat Loss Program",
+            FULL_BODY_2X: "Full Body Workout, 2 Days per Week",
+            STRENGTH_3X: "Strength Program, 3 Days per Week",
+            CARDIO_STRENGTH: "Cardio and Strength Combination"
         };
         const friendlyPlan = planDescriptions[data.planType] || data.planType;
 

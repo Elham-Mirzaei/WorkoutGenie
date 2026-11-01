@@ -1,5 +1,6 @@
 package com.workoutgenie.api;
 
+import com.workoutgenie.rules.InvalidWorkoutRequestException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -25,4 +26,13 @@ public class WorkoutValidationHandler {
                 .status(HttpStatus.BAD_REQUEST)
                 .body(Map.of("message", message));
     }
+    @ExceptionHandler(InvalidWorkoutRequestException.class)
+    public ResponseEntity<Map<String, String>> handleInvalidWorkoutRequest(
+            InvalidWorkoutRequestException exception) {
+
+        return ResponseEntity
+                .status(HttpStatus.BAD_REQUEST)
+                .body(Map.of("message", exception.getMessage()));
+    }
+
 }
